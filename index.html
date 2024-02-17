@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/c036339113.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -111,15 +112,17 @@
                                         </div>
                                         <div>
                                             <h4 class="font-bold text-2xl">Greenline Paribahan</h4>
-                                            <p class="text-[#03071299] font-normal text-base">Coach-009-WEB ! AC_Business</p>
+                                            <p class="text-[#03071299] font-normal text-base">Coach-009-WEB !
+                                                AC_Business</p>
                                         </div>
                                     </div>
                                     <div class="flex items-center pl-3 gap-2 bg-[#1DD10026] rounded-xl w-32">
                                         <img src="images/seat-green.png" class="w-5">
-                                        <span id="seats-left" class="text-sm font-medium text-[#1DD100]">40 Seats left</span>
+                                        <span id="seats-left" class="text-sm font-medium text-[#1DD100]">40 Seats
+                                            left</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="mt-24 bg-[#F7F8F8] w-[100%] rounded-2xl mx-auto ">
                                     <div class="flex justify-around mb-5 pt-5">
                                         <span>Route</span>
@@ -132,11 +135,14 @@
                                     </div>
                                     <hr>
                                     <div class="flex gap-2 pb-5 pt-5 px-3">
-                                        <span class="bg-[#0307120D] p-2 rounded-xl font-medium text-xs">Boarding Point-Laxmipur</span>
-                                        <span class="bg-[#0307120D] p-2 rounded-xl font-medium text-xs">Dropping Point-Bogura</span>
-                                        <span class="bg-[#0307120D] p-2 rounded-xl font-medium text-xs">Est. Time - 11 Hour</span>
+                                        <span class="bg-[#0307120D] p-2 rounded-xl font-medium text-xs">Boarding
+                                            Point-Laxmipur</span>
+                                        <span class="bg-[#0307120D] p-2 rounded-xl font-medium text-xs">Dropping
+                                            Point-Bogura</span>
+                                        <span class="bg-[#0307120D] p-2 rounded-xl font-medium text-xs">Est. Time - 11
+                                            Hour</span>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div>
@@ -148,6 +154,83 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Booking -->
+                <div class=" flex justify-around w-[80%] mx-auto mt-24 bg-white rounded-2xl pl-16 pt-9">
+                    <div>
+                        <h3 class="font-semibold text-xl mb-5">Select Your Seat</h3>
+                        <hr>
+                        <div class="flex justify-between my-5 ml-3">
+                            <span class="flex font-medium text-base"><img src="images/seat-gray.png">Available</span>
+                            <span class="flex text-green-600 font-medium text-base"><img
+                                    src="images/seat-green-filled.png">Selected</span>
+                        </div>
+                        <hr>
+                        <div class="flex justify-end p-4">
+                            <img src="images/steering-vehicle.jfif" class="w-16">
+                        </div>
+
+                        <div class="mt-14 grid grid-cols-5 gap-5 items-center">
+                            <span id="A">A</span>
+                            <button id="A1" class="bg-[#F7F8F8] w-16 p-3">A1</button>
+                            <button id="A2" class="bg-[#F7F8F8] w-16 p-3">A2</button>
+                            <button id="A3" class="bg-[#F7F8F8] w-16 p-3">A3</button>
+                            <button id="A4" class="bg-[#F7F8F8] w-16 p-3">A4</button>
+
+                            <span id="B">B</span>
+                            <button id="B1" class="bg-[#F7F8F8] w-16 p-3">B1</button>
+                            <button id="B2" class="bg-[#F7F8F8] w-16 p-3">B2</button>
+                            <button id="B3" class="bg-[#F7F8F8] w-16 p-3">B3</button>
+                            <button id="B4" class="bg-[#F7F8F8] w-16 p-3">B4</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-xl mb-5">Select Your Seat</h3>
+                        <hr>
+                        <div class="bg-[#F7F8F8] w-full">
+                            <div class="flex justify-between mt-3 p-4">
+                                <span class="font-medium text-xs mr-20 p-3">Seat</span>
+                                <span class="font-medium text-xs mr-20 p-3">Class</span>
+                                <span class="font-medium text-xs mr-20 p-3">Price</span>
+                            </div>
+                            <hr>
+                            
+                            <!-- all selecting seats -->
+                            <div id="selecting-seats" class="flex justify-between mt-3 p-4">
+                                <!-- all selecting seats show -->
+                            </div>
+
+                            <hr>
+
+                            <!-- total Price -->
+                            <div class="mt-5 p-4 flex justify-around">
+                                <span id="total-price" class="font-medium text-sm">Total Price:</span>
+                                <span id="total-price" class="font-semibold text-base">BDT: 0</span>
+                            </div>
+
+                            <!-- offer apply -->
+                            <div class="flex justify-center">
+                                <input type="text" placeholder="Have any Coupon?" class="p-3 border-none outline-none rounded-lg">
+                                <span class="btn bg-[#1DD100] text-white w-20">Apply</span>
+                            </div>
+
+                            <!-- Discount -->
+                            <div class="mt-5 p-4 flex justify-around">
+                                <span id="discount" class="font-semibold text-base">Discount: </span>
+                                <span id="total-price" class="font-semibold text-base">BDT: 0</span>
+                            </div>
+                            <!-- Grand Total -->
+                            <div class="mt-5 p-4 flex justify-around mb-5">
+                                <span id="grand-total" class="font-semibold text-base">Grand Total: </span>
+                                <span id="total-price" class="font-semibold text-base">BDT: 0</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
         </section>
     </main>
 </body>
