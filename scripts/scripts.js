@@ -93,7 +93,7 @@ for (let i = 0; i < seats.length; i++) {
                     else {
                         const discount = document.getElementById("discount-tag");
                         discount.value = " ";
-                        alert("Invalid Coupon Code Try Again");
+                        console.log("Invalid Coupon Code Try Again")
 
                     }
                 })
