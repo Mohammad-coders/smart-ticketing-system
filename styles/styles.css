@@ -7,13 +7,6 @@
 .raleway-font {
     font-family: "Raleway", sans-serif;
 }
-/* .banner-section{
-    background-image: url("../images/banner.png");
-    background-size: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-}
- */
 .banner_section{
     margin-top: 24px;
     background: url("../images/banner.png");
