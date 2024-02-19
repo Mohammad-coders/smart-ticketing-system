@@ -1,23 +1,41 @@
 let count = 0;
+const bookedSeat = [];
 const seats = document.querySelectorAll(".seat");
 
 
 for (let i = 0; i < seats.length; i++) {
     const seat = seats[i];
+
     seat.addEventListener('click', function () {
         let element = seat.innerHTML;
+
         const selectingSeats = document.getElementById('selecting-seats');
+
         const p = document.createElement('p');
-        p.innerText = element + "Economy" + 550;
+        p.classList.add("seatNameList");
+        p.innerText = element;
+
+        p.innerText = element + " " + "Economy" + " " + "550";
         p.classList.add("ml-5");
         p.classList.add("p-3");
         selectingSeats.appendChild(p);
 
+        const a = p.innerText.split(" ");
+
+        
+        bookedSeat.push(a[0]);
+        console.log(a[0]);
+        
+            // for(let i=0;i<bookedSeat.length;i++){
+            //     if(bookedSeat[i] === element){
+            //         selectingSeats.removeChild(p);
+            //     }
+            // }
+
+
         const inputPhoneNumber = document.getElementById("phoneNumber");
         const inputPhoneNumberValue = inputPhoneNumber.value;
-        // console.log(inputPhoneNumberValue);
         const inputPhoneNumberText = parseInt(inputPhoneNumberValue);
-        console.log(inputPhoneNumberText);
         const seatCounting = document.getElementById("seat-counting");
         const seatCountingText = seatCounting.innerText;
         const seatNumber = parseInt(seatCountingText);
@@ -35,18 +53,10 @@ for (let i = 0; i < seats.length; i++) {
 
         }
 
-        // *********************************************************************************
-        // *********************************************************************************
-        // *********************************************************************************
-        // *********************************************************************************
         if (newSeatNumber === 1 && inputPhoneNumberText !== null) {
             const nextBtn = document.getElementById("next-btn");
-            nextBtn.classList.remove("hidden");
+            nextBtn.removeAttribute("disabled");
         }
-        // *********************************************************************************
-        // *********************************************************************************
-        // *********************************************************************************
-        // *********************************************************************************
 
         count++;
         if (count > 4) {
@@ -99,7 +109,7 @@ for (let i = 0; i < seats.length; i++) {
             const grandTotalPrice = document.getElementById("grand-total");
             grandTotalPrice.innerText = total;
 
-        }
+        }        
 
 
 
